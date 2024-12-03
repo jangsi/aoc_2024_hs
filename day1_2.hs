@@ -27,7 +27,7 @@ scoreSimilarity x ys = x * countOccurrences x ys
 
 main :: IO ()
 main = do
-  (list1, list2) <- parse "./day1_input.txt"
+  (list1, list2) <- parseDay1 "./day1_input.txt"
   let l2' = qSort list2
   let score = sum (map (`scoreSimilarity` l2') list1)
   print score
